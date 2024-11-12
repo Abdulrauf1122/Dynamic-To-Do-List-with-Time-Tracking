@@ -1,0 +1,203 @@
+/* General Styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #00bcd4, #8e44ad);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #2c3e50;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+  letter-spacing: 2px;
+  color: #ecf0f1;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 2px solid #34495e;
+  background-color: #3498db;
+  color: #fff;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+button:active {
+  background-color: #1abc9c;
+}
+
+/* Task List */
+#task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #34495e;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+  color: #ecf0f1;
+  font-size: 1.1rem;
+}
+
+.task:hover {
+  transform: scale(1.02);
+}
+
+.task.dragging {
+  transform: scale(1.05);
+}
+
+.task-info {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-info span {
+  font-weight: 500;
+  color: #bdc3c7;
+}
+
+.timer {
+  margin-left: 15px;
+  font-size: 1.1rem;
+  color: #ecf0f1;
+}
+
+.start-timer, .remove-task {
+  padding: 8px 16px;
+  background-color: #16a085;
+  color: #fff;
+  border-radius: 6px;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.start-timer:hover, .remove-task:hover {
+  background-color: #1abc9c;
+  transform: scale(1.05);
+}
+
+.remove-task {
+  background-color: #e74c3c;
+}
+
+.start-timer {
+  background-color: #27ae60;
+}
+
+.tags {
+  font-style: italic;
+  color: #95a5a6;
+}
+
+#progress {
+  width: 0;
+  height: 10px;
+  background-color: #3498db;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+#total-time {
+  margin-top: 10px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.dark-mode {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+}
+
+.dark-mode button {
+  background-color: #3498db;
+}
+
+.dark-mode .task {
+  background-color: #34495e;
+  color: #ecf0f1;
+}
+
+.dark-mode .start-timer {
+  background-color: #16a085;
+}
+
+.dark-mode .remove-task {
+  background-color: #e74c3c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+}
+
+/* Dark Mode Toggle Button */
+#dark-mode-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  background-color: #1abc9c;
+  color: #fff;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#dark-mode-btn:hover {
+  transform: rotate(180deg);
+  background-color: #16a085;
+}
